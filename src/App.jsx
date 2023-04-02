@@ -5,12 +5,12 @@ import viteLogo from "/vite.svg";
 import Test from "./components/Test";
 import "./App.css";
 // import kuchBhi from "./scripts/speechToText";
-import DeepgramTranscriber from "./scripts/speechClass";
-import { DEEPGRAM_API_KEY } from "../env";
+// import DeepgramTranscriber from "./scripts/speechClass";
+// import { DEEPGRAM_API_KEY } from "../env";
 
 function App() {
   const [count, setCount] = useState(0);
-  const ts = new DeepgramTranscriber(DEEPGRAM_API_KEY);
+  // const ts = new DeepgramTranscriber(DEEPGRAM_API_KEY);
   // const [mr, setMr] = useState();
   return <Test />;
   // return (
