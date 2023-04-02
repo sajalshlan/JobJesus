@@ -1,55 +1,15 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-// import { startRecording, stopRecording } from "./scripts/speechSynthesis";
-import Test from "./components/Test";
+import "primereact/resources/themes/viva-dark/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+import "primeflex/primeflex.css";
+
+import Main from "./components/Main";
 import "./App.css";
-// import kuchBhi from "./scripts/speechToText";
-// import DeepgramTranscriber from "./scripts/speechClass";
-// import { DEEPGRAM_API_KEY } from "../env";
 
 function App() {
   const [count, setCount] = useState(0);
-  // const ts = new DeepgramTranscriber(DEEPGRAM_API_KEY);
-  // const [mr, setMr] = useState();
-  return <Test />;
-  // return (
-  //   <div className="App">
-  //     <div>
-  //       <a href="https://vitejs.dev" target="_blank">
-  //         <img src={viteLogo} className="logo" alt="Vite logo" />
-  //       </a>
-  //       <a href="https://reactjs.org" target="_blank">
-  //         <img src={reactLogo} className="logo react" alt="React logo" />
-  //       </a>
-  //     </div>
-  //     <h1>Vite + React</h1>
-  //     <div className="card">
-  //       <button
-  //         onClick={async () => {
-  //           console.log("hiii");
-  //           if (count % 2 == 0) {
-  //             ts.startRecording();
-  //           } else {
-  //             ts.stopRecording();
-  //             ts.recognize((text) => {
-  //               console.log(text);
-  //             });
-  //           }
-  //           setCount((count) => count + 1);
-  //         }}
-  //       >
-  //         count is {count}
-  //       </button>
-  //       <p>
-  //         Edit <code>src/App.jsx</code> and save to test HMR
-  //       </p>
-  //     </div>
-  //     <p className="read-the-docs">
-  //       Click on the Vite and React logos to learn more
-  //     </p>
-  //   </div>
-  // );
+  return <Main />;
 }
 
 export default App;
