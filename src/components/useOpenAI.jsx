@@ -23,9 +23,9 @@ const useOpenAI = (apiKey) => {
         messages: prompt,
         ...options,
       });
-      console.log(response);
+      //   console.log(response);
       setLoading(false);
-      return response.choices[0].text.trim();
+      return response.data.choices[0].message;
     } catch (error) {
       setLoading(false);
       setError(error);

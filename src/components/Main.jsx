@@ -71,9 +71,9 @@ const Main = () => {
             console.log(tmp);
             const tmpPrompt = await getCompletion(tmp, { temperature: 0.6 });
 
-            console.log(tmpPrompt);
+            console.log("####", tmpPrompt);
             // todo: speech
-            tmp.push({ role: "assistant", content: tmpPrompt });
+            tmp.push(tmpPrompt);
             setContext(tmp);
           }}
         >
