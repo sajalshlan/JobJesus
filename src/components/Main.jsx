@@ -3,7 +3,6 @@ import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 import useOpenAI from "./useOpenAI";
-import { OPENAI_API_KEY } from "../../env";
 
 const flatize = (arr) => {
   let s = "";
@@ -36,7 +35,9 @@ const Main = () => {
       content: "1. why are hooks in react, what are they used for ?",
     },
   ]);
-  const [getCompletion, loading, error] = useOpenAI(OPENAI_API_KEY);
+  const [getCompletion, loading, error] = useOpenAI(
+    import.meta.env.VITE_OPENAI_API_KEY
+  );
 
   if (!browserSupportsSpeechRecognition) {
     return <span>Browser doesn't support speech recognition.</span>;

@@ -19,7 +19,7 @@ const useOpenAI = (apiKey) => {
 
     try {
       const response = await openaiClientRef.current.createChatCompletion({
-        model: "gpt-3.5-turbo",
+        model: "text-davinci-003",
         messages: prompt,
         ...options,
       });
