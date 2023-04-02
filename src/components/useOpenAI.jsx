@@ -18,11 +18,12 @@ const useOpenAI = (apiKey) => {
     setError(null);
 
     try {
-      const response = await openaiClientRef.current.complete({
-        engine: "davinci",
-        prompt,
+      const response = await openaiClientRef.current.createChatCompletion({
+        model: "gpt-3.5-turbo",
+        messages: prompt,
         ...options,
       });
+      console.log(response);
       setLoading(false);
       return response.choices[0].text.trim();
     } catch (error) {

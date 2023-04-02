@@ -29,9 +29,10 @@ export default async function (req, res) {
 
   try {
     const completion = await openai.createCompletion({
-      model: "text-davinci-003",
+      model: "gpt-3.5-turbo",
       prompt: generatePrompt(animal),
       temperature: 0.6,
+      max_tokens: 2048,
     });
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch (error) {
