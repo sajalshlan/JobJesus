@@ -18,6 +18,15 @@ body {
     height: 100vh;
 }
 
+.p-button.p-component {
+    padding: 1rem;
+}
+
+.p-button.p-component:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid var(--primary-color);
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -28,4 +37,26 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+body {
+    --sb-track-color: #232e33;
+    --sb-thumb-color: #2c96bd;
+    --sb-size: 7px;
+
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
 }
